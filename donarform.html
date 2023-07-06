@@ -1,0 +1,119 @@
+<html>
+<head>
+<style type=text/css>
+body
+{background-image: url("backdonar.jpg");
+    background-size: cover;
+	height:100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+</style>
+<script type="text/javascript">
+function fname()
+{
+var f_name=form1.First_Name.value;
+re1 = /[^A-Z,a-z]/
+if(re1.test(f_name))
+{
+alert('InCorrect First Name');
+}
+}
+function lname()
+{
+var name=form1.Last_Name.value;
+re = /[^A-Z,a-z]/
+if (re.test(name))
+{
+alert('InCorrect Last Name');
+}
+}
+function age()
+{
+var age_value=form1.Age.value;
+re3 = /\D/
+if (re3.test(age_value))
+{
+alert('Enter Age In Number Format');
+}
+else if(age_value<18||age_value>65)
+{
+alert('Eligibility Criteria For Blood Donation Is 18 to 65');
+}
+}
+function p_no()
+{
+var ph_no=form1.phone_no.value;
+re4 = /\D/
+if (re4.test(ph_no))
+{
+alert('Enter Valid Phone Number');
+}
+}
+</script>
+</head>
+<body>
+<table cellspacing="15px"><td><center><a href="index.html"><img src="p.png" width="50" height="50"></a></center></td>
+<td><center><a href="Recipient.html"><img src="p2.png" width="50" height="50"></a></center></td>
+<td><center><a href="4.html"><img src="p3.png" width="50" height="50"></a></center></td>
+<td><center><a href="manipulate.html"><img src="settings.png" width="50" height="50"></a></center></td>
+</table>
+<center><font face="Cooper Black" size="24">Donor Details</font></center><br><br>
+<center><table cellspacing="10px" width="1500" style="background-color:black">
+<td><center><img src="d_image.jpg" width="500" height="800"></center></td>
+<td background="page.png"><form name="form1">
+<br><br><h1 align="center">Welcome To Blood Donation Camp</h1><hr color="black" border=5>
+<h3>
+&emsp;&emsp;&emsp;&emsp;
+Donor Id: <input type="text" name="D_Id" size=10 >
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+First Name: <input type="text" name="First_Name" size=10 onblur="fname()"/>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Last Name: <input type="text" name="Last_Name" size=10 onblur="lname()">
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Date Of Birth: <input type="date" name="bdate">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Age: <input type="text" name="Age" size=2 onblur="age()">
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Phone Number: <input type="text" name="phone_no" maxlength=10 size=10 onblur="p_no()">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+Email Id: <input type="text" name="emailid" maxlength=20 size=15>
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Occupation: <input type="text" name="occupation" maxlength=10 size=10>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Gender: 
+<input type="radio" name="r0" value="male">Male
+<input type="radio" name="r0" value="female">Female
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Date Of Donation: <input type="date" name="ddate">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+Blood Group: 
+<select name="bg">
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+</select>
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Residential Address:
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<textarea name="address" cols=30 row=4></textarea>
+<br><br>
+<br><br><center>
+<input type="submit" name="submit1" value="Submit" >&emsp;&emsp;
+<input type="reset" name="reset" value="Reset" >
+</center>
+</h3>
+</form></td></table></center>
+</body>
+</html>

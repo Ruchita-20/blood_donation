@@ -1,0 +1,101 @@
+<html>
+<head>
+<style type=text/css>
+body
+{background-image: url("backimg.jpg");
+    background-size: cover;
+	height:100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+div{
+background-color:black;
+}</style>
+<script type="text/javascript">
+function d_increase()
+{
+document.size.height="250";
+document.size.width="220";
+document.size.src="donar.gif";
+}
+function d_decrease()
+{
+document.size.height="200";
+document.size.width="160";
+document.size.src="donar.gif";
+}
+function p_increase()
+{
+document.s.height="250";
+document.s.width="220";
+document.s.src="blood-bag.gif";
+}
+function p_decrease()
+{
+document.s.height="200";
+document.s.width="160";
+document.s.src="blood-bag.gif";
+}
+function v_increase()
+{
+document.video.height="250";
+document.video.width="220";
+document.video.src="video-marketing_2.gif";
+}
+function v_decrease()
+{
+document.video.height="200";
+document.video.width="160";
+document.video.src="video-marketing_2.gif";
+}
+
+Banners = new Array('s1.png','s2.jpg','s3.jpg','s4.jpg','s5.jpg'); 
+CurrentBanner = 0; 
+function DisplayBanners()
+{
+if (document.images)
+{
+CurrentBanner++;
+if (CurrentBanner == Banners.length)
+{
+CurrentBanner = 0
+}
+document.RotateBanner.src= Banners[CurrentBanner]
+setTimeout("DisplayBanners()",4000) 
+}
+}
+</script>
+</head>
+<body onload="DisplayBanners()"> 
+<div>
+<br><center><img src="b.png" height="120" width="600"></center><br><br>
+</div>
+<table cellspacing="80px" align="center">
+<td>
+<a href="donarform.html" style="text-decoration:none;">
+<img src="donar.gif" width="160" height="200" name="size" onmouseover="d_increase()" onmouseout="d_decrease()">
+<br>
+<font face="Arial Black" color="black" align="center">Donate Blood</font>
+</a>
+</td>
+<td>
+<a href="Recipient.html" style="text-decoration:none;">
+<img src="blood-bag.gif" width="160" height="200" name="s" onmouseover="p_increase()" onmouseout="p_decrease()">
+<br>
+<font face="Arial Black" color="black" align="center">Request Blood</font>
+</a>
+</td>
+<td>
+<a href="4.html" style="text-decoration:none;">
+<img src="video-marketing_2.gif" width="160" height="200" name="video" onmouseover="v_increase()" onmouseout="v_decrease()">
+<br>
+<font face="Arial Black" color="black" align="center">Watch Videos</font>
+</a>
+</td>
+</table>
+<div><br></div>
+<center><hr border=10 color="black"><br>
+<img src="s1.png" width="1200" height="600" name="RotateBanner" border=8>
+</center>
+</body>
+</html>

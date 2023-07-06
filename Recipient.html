@@ -1,0 +1,137 @@
+<html>
+<head>
+<style type=text/css>
+body
+{background-image: url("backre.jpg");
+    background-size: cover;
+	height:100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+</style>
+<script type="text/javascript">
+function fname()
+{
+var f_name=form2.First_Name.value;
+re1 = /[^A-Z,a-z]/
+if(re1.test(f_name))
+{
+alert('InCorrect First Name');
+}
+}
+function lname()
+{
+var l_name=form2.Last_Name.value;
+re = /[^A-Z,a-z]/
+if (re.test(l_name))
+{
+alert('InCorrect Last Name');
+}
+}
+function age()
+{
+var age_value=form2.Age.value;
+re3 = /\D/
+if (re3.test(age_value))
+{
+alert('Enter Age In Number Format');
+}
+}
+function p_no()
+{
+var ph_no=form2.phone_no.value;
+re4 = /\D/
+if (re4.test(ph_no))
+{
+alert('Please Enter Valid Phone Number');
+}
+}
+function hname()
+{
+var h_name=form2.Hospital_Name.value;
+re5 = /[^A-Z,a-z]/
+if (re5.test(h_name))
+{
+alert('InCorrect Hospital Name');
+}
+}
+function c_no()
+{
+var c=form2.Contact_hospital.value;
+re6=/\D/
+if (re6.test(c))
+{
+alert('Please Enter Valid Contact Number');
+}
+}
+</script>
+</head>
+<body onload="show()">
+<table cellspacing="15px"><td><center><a href="index.html"><img src="p.png" width="50" height="50"></a></center></td>
+<td><center><a href="donarform.html"><img src="p1.png" width="50" height="50"></a></center></td>
+<td><center><a href="4.html"><img src="p3.png" width="50" height="50"></a></center></td>
+<td><center><a href="manipulater.html"><img src="settings.png" width="50" height="50"></a></center></td>
+</table>
+<center><font face="Cooper Black" size="24">Recipient Details</font></center><br><br>
+<center><table cellspacing="10px" width="1500" style="background-color:black">
+<td><img src="hand.png"></td>
+<td background="page.png"><form name="form2">
+<br><br><h1 align="center">Welcome To Blood Donation Camp</h1><hr color="black" border=5>
+<h3>
+&emsp;&emsp;&emsp;&emsp;
+Request Id: <input type="text" name="D_Id" size=10 >
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+First Name: <input type="text" name="First_Name" size=10 onblur="fname()">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+Last Name: <input type="text" name="Last_Name" size=10 onblur="lname()">
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Date Of Request: <input type="date" name="bdate">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; &ensp;
+Age: <input type="text" name="Age" size=2 onblur="age()">
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Phone Number of Patient: <input type="text" name="phone_no" maxlength=10 size=10 onblur="p_no()">
+&emsp;&emsp;&emsp;&emsp;&emsp;
+Disease: <input type="text" name="disease" maxlength=10 size=10>
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Blood Group: 
+<select name="bg">
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+</select>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+Gender: 
+<input type="radio" name="r0" value="male">Male
+<input type="radio" name="r0" value="female">Female
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Name Of Hospital You Are Addmitted In:
+<input type="text" name="Hospital_Name" size=20 onblur="hname()">
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Contact Number Of Hospital: <input type="text" name="Contact_hospital" maxlength=10 size=10 onblur="c_no()" >
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Email Id Of Hospital: <input type="text" name="email_hospital" maxlength=20 size=15 >
+<br><br>
+&emsp;&emsp;&emsp;&emsp;
+Hospital's Address:<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<textarea name="address" cols=30 row=4></textarea>
+<br><br>
+<center>
+<input type="submit" name="r_insert" value="Submit" >&emsp;&emsp;
+<input type="reset" name="reset" value="Reset" ></center>
+</h3>
+</form></td></table></center>
+</body>
+</html>
